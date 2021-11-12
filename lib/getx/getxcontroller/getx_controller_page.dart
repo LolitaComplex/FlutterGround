@@ -25,5 +25,3 @@ class GetXControllerPage extends StatelessWidget {
     );
   }
 }
-
-class Person {}
