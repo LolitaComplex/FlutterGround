@@ -1,3 +1,4 @@
+import 'package:FlutterPlayground/assets/assets_image_page.dart';
 import 'package:FlutterPlayground/blur_test_page.dart';
 import 'package:FlutterPlayground/inherited/inherited_test_page.dart';
 import 'package:FlutterPlayground/layout_test_page.dart';
@@ -6,6 +7,7 @@ import 'package:FlutterPlayground/router_constant.dart';
 import 'package:FlutterPlayground/stateful_widget_page.dart';
 import 'package:FlutterPlayground/text_line_height_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:page_life_cycle/page_life_cycle.dart';
 
 import 'gesture_test_page.dart';
@@ -31,6 +33,7 @@ class MyApp extends StatelessWidget {
     RouterConstant.INHERITED_TEST_PAGE: (BuildContext context) => InheritedTestPage(),
     RouterConstant.INHERITED_REFRESH_PART: (BuildContext context) => InheritedRefreshPartPage(),
     RouterConstant.GEX_REFRESH_PAGE: (BuildContext context) => GetXRefreshPage(),
+    RouterConstant.ASSETS_IMAGE_PAGE: (BuildContext context) => AssetsImagePage(),
   };
 
 
@@ -64,6 +67,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   @override
+  void initState() {
+    super.initState();
+    var data = rootBundle.loadString("assets/configs/config.json");
+    print("Doing Home data: $data");
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("FlutterPlayground")),
@@ -84,6 +94,7 @@ class _HomePageState extends State<HomePage> {
     buttons.add(_buildRaisedButton("Inherited数据共享", () => goToTargetPage(RouterConstant.INHERITED_TEST_PAGE)));
     buttons.add(_buildRaisedButton("Inherited局部更新", () => goToTargetPage(RouterConstant.INHERITED_REFRESH_PART)));
     buttons.add(_buildRaisedButton("GetX更新", () => goToTargetPage(RouterConstant.GEX_REFRESH_PAGE)));
+    buttons.add(_buildRaisedButton("AssetsImage", () => goToTargetPage(RouterConstant.ASSETS_IMAGE_PAGE)));
 
     return Container(
       alignment: Alignment.topCenter,
