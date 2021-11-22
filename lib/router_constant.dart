@@ -10,4 +10,5 @@ class RouterConstant {
   static const INHERITED_REFRESH_PART = "inherited_refresh_part";
   static const GEX_REFRESH_PAGE = "getx_test_page";
   static const ASSETS_IMAGE_PAGE = "assets_image_page";
+  static const DART_DEFINE_PAGE = "dart_define_page";
 }

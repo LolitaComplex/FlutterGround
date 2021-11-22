@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:page_life_cycle/page_life_cycle.dart';
 
+import 'define/dart_define_page.dart';
 import 'gesture_test_page.dart';
 import 'getx/getx_refresh_page.dart';
 import 'inherited/refresh/inherited_refresh_part_page.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
     RouterConstant.INHERITED_REFRESH_PART: (BuildContext context) => InheritedRefreshPartPage(),
     RouterConstant.GEX_REFRESH_PAGE: (BuildContext context) => GetXRefreshPage(),
     RouterConstant.ASSETS_IMAGE_PAGE: (BuildContext context) => AssetsImagePage(),
+    RouterConstant.DART_DEFINE_PAGE: (BuildContext context) => DartDefinePage(),
   };
 
 
@@ -94,7 +96,8 @@ class _HomePageState extends State<HomePage> {
     buttons.add(_buildRaisedButton("Inherited数据共享", () => goToTargetPage(RouterConstant.INHERITED_TEST_PAGE)));
     buttons.add(_buildRaisedButton("Inherited局部更新", () => goToTargetPage(RouterConstant.INHERITED_REFRESH_PART)));
     buttons.add(_buildRaisedButton("GetX更新", () => goToTargetPage(RouterConstant.GEX_REFRESH_PAGE)));
-    buttons.add(_buildRaisedButton("AssetsImage", () => goToTargetPage(RouterConstant.ASSETS_IMAGE_PAGE)));
+    buttons.add(_buildRaisedButton("AssetsImage资源加载", () => goToTargetPage(RouterConstant.ASSETS_IMAGE_PAGE)));
+    buttons.add(_buildRaisedButton("DartDefine运行时配置常量", () => goToTargetPage(RouterConstant.DART_DEFINE_PAGE)));
 
     return Container(
       alignment: Alignment.topCenter,
