@@ -5,10 +5,10 @@ class RefreshPart2WidgetA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PartRefreshWrapperState state = PartRefreshWrapper.of(context);
+    PartRefreshWrapperState? state = PartRefreshWrapper.of(context);
 
     print("RefreshPart2: WidgetA refresh");
-    return Text("当前是：${state.count}",
+    return Text("当前是：${state?.count}",
         style: TextStyle(
           color: Colors.red,
           fontSize: 20

@@ -5,16 +5,16 @@ class PartRefreshWrapper extends StatefulWidget {
 
   final Widget child;
 
-  const PartRefreshWrapper({Key key, this.child}) : super(key: key);
+  const PartRefreshWrapper({Key? key, required this.child}) : super(key: key);
 
   @override
   PartRefreshWrapperState createState() => PartRefreshWrapperState();
 
-  static PartRefreshWrapperState of(BuildContext context, {bool isRebuild = true}) {
+  static PartRefreshWrapperState? of(BuildContext context, {bool isRebuild = true}) {
     if (isRebuild) {
-      return context.dependOnInheritedWidgetOfExactType<_InheritedWidget>().data;
+      return context.dependOnInheritedWidgetOfExactType<_InheritedWidget>()?.data;
     }
-    return context.findAncestorWidgetOfExactType<_InheritedWidget>().data;
+    return context.findAncestorWidgetOfExactType<_InheritedWidget>()?.data;
   }
 }
 
@@ -34,7 +34,7 @@ class _InheritedWidget extends InheritedWidget {
 
   final PartRefreshWrapperState _state;
 
-  const _InheritedWidget({Key key, Widget child, PartRefreshWrapperState data}) :
+  const _InheritedWidget({Key? key, required Widget child, required PartRefreshWrapperState data}) :
         this._state = data,
         super(key: key, child: child);
 

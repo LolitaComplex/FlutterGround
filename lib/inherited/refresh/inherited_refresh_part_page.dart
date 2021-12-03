@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 /// 例子博客地址： https://blog.csdn.net/vitaviva/article/details/105462686
 class InheritedRefreshPartPage extends StatefulWidget {
-  const InheritedRefreshPartPage({Key key}) : super(key: key);
+  const InheritedRefreshPartPage({Key? key}) : super(key: key);
 
   @override
   _InheritedRefreshPartPageState createState() => _InheritedRefreshPartPageState();
@@ -36,7 +36,7 @@ class _InheritedRefreshPartPageState extends State<InheritedRefreshPartPage> {
   }
 
   MaterialButton _buildRaisedButton(String text, VoidCallback callback) {
-    return RaisedButton(
+    return MaterialButton(
         onPressed: callback,
         child: Text(text)
     );

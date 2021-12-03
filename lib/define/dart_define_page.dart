@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DartDefinePage extends StatefulWidget {
-  const DartDefinePage({Key key}) : super(key: key);
+  const DartDefinePage({Key? key}) : super(key: key);
 
   @override
   _DartDefinePageState createState() => _DartDefinePageState();

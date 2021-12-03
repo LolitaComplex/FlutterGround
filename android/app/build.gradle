@@ -45,6 +45,24 @@ android {
         versionName flutterVersionName
     }
 
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include "armeabi-v7a", "arm64-v8a"
+//            universalApk false
+//        }
+//    }
+
+//    flavorDimensions "default"
+
+//    productFlavors {
+//        正式包
+//        publicServer {}
+//        测式包(显示正式测试切换选项)
+//        qaServer {}
+//    }
+
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.

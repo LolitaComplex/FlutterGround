@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import '../person_entity.dart';
 
 class GetXControllerRefreshListPage extends StatefulWidget {
-  GetXControllerRefreshListPage({Key key}) : super(key: key);
+  GetXControllerRefreshListPage({Key? key}) : super(key: key);
 
   @override
   _GetXControllerRefreshListPageState createState() => _GetXControllerRefreshListPageState();
@@ -44,7 +44,7 @@ class _GetXControllerRefreshListPageState extends State<GetXControllerRefreshLis
               bottom: 40,
               child: Column(
                 children: [
-                  RaisedButton(
+                  MaterialButton(
                     onPressed: () {
                       var random = new Random();
                       var index = random.nextInt(_controller.data.length);
@@ -55,20 +55,20 @@ class _GetXControllerRefreshListPageState extends State<GetXControllerRefreshLis
                     child: Text("更新某个Item"),
                   ),
                   SizedBox(height: 10),
-                  RaisedButton(
+                  MaterialButton(
                       onPressed: () {
                         Person person = new Person("新增Item", _controller.data.length * 2 + 1);
                         _controller.data.add(person.obs);
                       },
                       child: Text("新增一个Item")),
                   SizedBox(height: 10),
-                  RaisedButton(
+                  MaterialButton(
                       onPressed: () {
                         _controller.data.removeAt(_controller.data.length ~/ 2);
                       },
                       child: Text("删除一个Item")),
                   SizedBox(height: 10),
-                  RaisedButton(
+                  MaterialButton(
                       onPressed: () {
                         var item = _controller.data.removeAt(_controller.data.length ~/ 2);
                         _controller.data.insert(0, item);

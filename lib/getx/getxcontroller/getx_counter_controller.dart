@@ -3,7 +3,7 @@ import '../person_entity.dart';
 
 class GetXCounterController extends GetxController {
 
-  final RxList<Rx<Person>> _data = List<Rx<Person>>().obs;
+  final RxList<Rx<Person>> _data = <Rx<Person>>[].obs;
   RxInt _status = 0.obs;
 
   RxList<Rx<Person>> get data => _data;

@@ -7,10 +7,10 @@ class RefreshPart2WidgetC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PartRefreshWrapperState state = PartRefreshWrapper.of(context, isRebuild: false);
+    PartRefreshWrapperState? state = PartRefreshWrapper.of(context, isRebuild: false);
 
     print("RefreshPart2: WidgetC refresh");
-    return RaisedButton(onPressed: state.incrementCount,
+    return MaterialButton(onPressed: state?.incrementCount,
       child: Icon(Icons.add),
     );
   }

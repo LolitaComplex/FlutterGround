@@ -1,9 +1,8 @@
 import 'package:FlutterPlayground/router_constant.dart';
 import 'package:flutter/material.dart';
-import 'package:page_life_cycle/page_life_cycle.dart';
 
 class LifecycleTestPage extends StatefulWidget {
-  const LifecycleTestPage({Key key}) : super(key: key);
+  const LifecycleTestPage({Key? key}) : super(key: key);
 
   @override
   _LifecycleTestPageState createState() {
@@ -13,13 +12,13 @@ class LifecycleTestPage extends StatefulWidget {
 }
 
 class _LifecycleTestPageState extends State<LifecycleTestPage>
-    with WidgetsBindingObserver, PageLifeCycle {
+    with WidgetsBindingObserver {
 
   @override
   void initState() {
     super.initState();
     print("------initState------");
-    WidgetsBinding.instance.addObserver(this);
+    // WidgetsBinding.instance.addObserver(this);
   }
 
   @override
@@ -34,13 +33,13 @@ class _LifecycleTestPageState extends State<LifecycleTestPage>
             Container(
               alignment: Alignment.topCenter,
               margin: EdgeInsets.only(top: 15),
-              child: RaisedButton(child: Text("刷新"),
+              child: MaterialButton(child: Text("刷新"),
                   onPressed: () => setState(() {})),
             ),
             Container(
               alignment: Alignment.topCenter,
               margin: EdgeInsets.only(top: 15),
-              child: RaisedButton(child: Text("下一页"),
+              child: MaterialButton(child: Text("下一页"),
                   onPressed: () => Navigator.pushNamed(context, RouterConstant.STATEFULL_PAGE)),
             )
           ],
@@ -92,30 +91,30 @@ class _LifecycleTestPageState extends State<LifecycleTestPage>
   void dispose() {
     super.dispose();
     print("------dispose------");
-    WidgetsBinding.instance.removeObserver(this);
+    // WidgetsBinding.instance.removeObserver(this);
   }
 
   @override
   void onShow() {
-    super.onShow();
+    // super.onShow();
     print("---PageLifeCycle onShow---");
   }
 
   @override
   void onHide() {
-    super.onHide();
+    // super.onHide();
     print("---PageLifeCycle onHide---");
   }
 
   @override
   void onAppBackground() {
-    super.onAppBackground();
+    // super.onAppBackground();
     print("---PageLifeCycle onAppBackground---");
   }
 
   @override
   void onAppForeground() {
-    super.onAppForeground();
+    // super.onAppForeground();
     print("---PageLifeCycle onAppForeground---");
   }
 }

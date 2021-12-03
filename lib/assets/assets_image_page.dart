@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AssetsImagePage extends StatelessWidget {
-  const AssetsImagePage({Key key}) : super(key: key);
+  const AssetsImagePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

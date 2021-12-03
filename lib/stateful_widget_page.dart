@@ -22,7 +22,7 @@ class _StatefulWidgetPageState extends State<StatefulWidgetPage> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> pages = List();
+    List<Widget> pages = [];
     pages.add(_buildFirstPage());
     pages.add(_buildSecondPage());
 

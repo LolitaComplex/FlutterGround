@@ -5,14 +5,14 @@ import 'refresh_part_widget_b.dart';
 import 'refresh_part_widget_c.dart';
 
 class RefreshPartWidgetPage extends StatefulWidget {
-  const RefreshPartWidgetPage({Key key}) : super(key: key);
+  const RefreshPartWidgetPage({Key? key}) : super(key: key);
 
   @override
   RefreshPartWidgetPageState createState() => RefreshPartWidgetPageState();
 
-  static RefreshPartWidgetPageState of(BuildContext context,
+  static RefreshPartWidgetPageState? of(BuildContext context,
       {bool rebuild = true}) {
-    return context.dependOnInheritedWidgetOfExactType<_RefreshPartInheritedWidget>().data;
+    return context.dependOnInheritedWidgetOfExactType<_RefreshPartInheritedWidget>()?.data;
 
     // if (rebuild) {
     //   return (context.inheritFromWidgetOfExactType(_RefreshPartInheritedWidget)
@@ -57,8 +57,8 @@ class _RefreshPartInheritedWidget extends InheritedWidget {
 
   RefreshPartWidgetPageState get data => _mData;
 
-  const _RefreshPartInheritedWidget({Key key, Widget child,
-    RefreshPartWidgetPageState data})
+  const _RefreshPartInheritedWidget({Key? key, required Widget child,
+    required RefreshPartWidgetPageState data})
       : this._mData = data,
         super(key: key, child: child);
 

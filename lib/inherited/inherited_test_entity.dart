@@ -2,7 +2,7 @@ class InheritedTestEntity {
 
   InheritedTestEntity() : this.clone(null);
 
-  InheritedTestEntity.clone(InheritedTestEntity source) {
+  InheritedTestEntity.clone(InheritedTestEntity? source) {
     if(source != null) {
       this._isFromOuterPage = source.currentInnerPage;
       this._isFromInnerPage = source.currentInnerPage;

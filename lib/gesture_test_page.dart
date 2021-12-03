@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GestureTestPage extends StatefulWidget {
-  const GestureTestPage({Key key}) : super(key: key);
+  const GestureTestPage({Key? key}) : super(key: key);
 
   @override
   _GestureTestPageState createState() => _GestureTestPageState();

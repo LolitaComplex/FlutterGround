@@ -1,19 +1,17 @@
 import 'dart:async';
 
-import 'package:flutter/services.dart';
-
 class Test {
 
-  bool callback(){
+  bool test() {
     Future.delayed(Duration(seconds: 1))
-      .then((value) {
+        .then((value) {
 
-      }).onError((error, stackTrace) {
+    }).onError((error, stackTrace) {
 
-      }).catchError((e) {
+    }).catchError((e) {
 
-      }).whenComplete(() => null)
-      .timeout(Duration(seconds: 10));
+    }).whenComplete(() => null)
+        .timeout(Duration(seconds: 10));
 
     final completer = Completer<String>();
     completer.complete("");
@@ -42,8 +40,7 @@ class Test {
     controller.sink.add("test2");
     controller.sink.close();
     controller.stream;
-
-
+    return true;
   }
 
   void async() async {

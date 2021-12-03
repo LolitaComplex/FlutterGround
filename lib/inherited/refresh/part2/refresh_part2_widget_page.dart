@@ -6,7 +6,7 @@ import 'refresh_part2_widget_b.dart';
 import 'refresh_part2_widget_c.dart';
 
 class RefreshPart2WidgetPage extends StatefulWidget {
-  const RefreshPart2WidgetPage({Key key}) : super(key: key);
+  const RefreshPart2WidgetPage({Key? key}) : super(key: key);
 
   @override
   RefreshPart2WidgetPageState createState() => RefreshPart2WidgetPageState();

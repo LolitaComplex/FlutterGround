@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'gex_obx_part_refresh_text.dart';
 
 class GetXObxRefreshPage extends StatelessWidget {
-  GetXObxRefreshPage({Key key}) : super(key: key);
+  GetXObxRefreshPage({Key? key}) : super(key: key);
 
   final RxInt counter1 = 0.obs;
   final RxInt counter2 = 0.obs;
@@ -31,8 +31,8 @@ class GetXObxRefreshPage extends StatelessWidget {
               print("Refresh Obx DefaultText part");
               return Text("Obx 默认Text ${"a".obs}");
             }), // 默认会崩溃，必须使用响应数据类型
-            RaisedButton(onPressed: () => counter1.value++, child: Icon(Icons.add)),
-            RaisedButton(onPressed: () => counter2.value++, child: Icon(Icons.add))
+            MaterialButton(onPressed: () => counter1.value++, child: Icon(Icons.add)),
+            MaterialButton(onPressed: () => counter2.value++, child: Icon(Icons.add))
           ],
         ),
       ),

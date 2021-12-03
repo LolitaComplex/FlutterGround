@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GetXObxPartRefreshText extends StatelessWidget {
-  const GetXObxPartRefreshText({Key key}) : super(key: key);
+  const GetXObxPartRefreshText({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

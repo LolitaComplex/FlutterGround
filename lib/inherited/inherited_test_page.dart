@@ -4,7 +4,7 @@ import 'package:FlutterPlayground/inherited/inherited_test_entity.dart';
 import 'package:flutter/material.dart';
 
 class InheritedTestPage extends StatefulWidget {
-  const InheritedTestPage({Key key}) : super(key: key);
+  const InheritedTestPage({Key? key}) : super(key: key);
 
   @override
   _InheritedTestPageState createState() => _InheritedTestPageState();
@@ -29,7 +29,7 @@ class _InheritedTestPageState extends State<InheritedTestPage> {
               Text(getShareText()),
               Container(
                 margin: EdgeInsets.only(top: 15),
-                child: RaisedButton(
+                child: MaterialButton(
                     child: Text("Outer刷新"),
                     onPressed: () => setState(() {
                       entity = InheritedTestEntity.clone(entity);

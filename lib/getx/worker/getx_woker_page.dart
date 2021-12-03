@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class GetXWorkerPage extends StatefulWidget {
-  const GetXWorkerPage({Key key}) : super(key: key);
+  const GetXWorkerPage({Key? key}) : super(key: key);
 
   @override
   _GetXWorkerPageState createState() => _GetXWorkerPageState();
@@ -31,7 +31,7 @@ class _GetXWorkerPageState extends State<GetXWorkerPage> {
               children: [
                 Text("计数器: ${controller.count}"),
                 SizedBox(height: 10,),
-                RaisedButton(onPressed: () {
+                MaterialButton(onPressed: () {
                   controller.add();
                 }, child: Icon(Icons.add),)
               ],

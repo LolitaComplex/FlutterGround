@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import '../person_entity.dart';
 
 class GetXObxRefreshListPage extends StatelessWidget {
-  GetXObxRefreshListPage({Key key}) : super(key: key);
+  GetXObxRefreshListPage({Key? key}) : super(key: key);
 
   RxList<Rx<Person>> data = RxList.from(_buildPersonList());
 
@@ -59,7 +59,7 @@ class GetXObxRefreshListPage extends StatelessWidget {
               bottom: 40,
               child: Column(
                 children: [
-                  RaisedButton(
+                  MaterialButton(
                     onPressed: () {
                       var random = new Random();
                       var index = random.nextInt(data.length);
@@ -70,7 +70,7 @@ class GetXObxRefreshListPage extends StatelessWidget {
                     child: Text("更新某个Item"),
                   ),
                   SizedBox(height: 10),
-                  RaisedButton(
+                  MaterialButton(
                       onPressed: () {
                         Person person =
                             new Person("新增Item", data.length * 2 + 1);
@@ -78,13 +78,13 @@ class GetXObxRefreshListPage extends StatelessWidget {
                       },
                       child: Text("新增一个Item")),
                   SizedBox(height: 10),
-                  RaisedButton(
+                  MaterialButton(
                       onPressed: () {
                         data.removeAt(data.length ~/ 2);
                       },
                       child: Text("删除一个Item")),
                   SizedBox(height: 10),
-                  RaisedButton(
+                  MaterialButton(
                       onPressed: () {
                         var item = data.removeAt(data.length ~/ 2);
                         data.insert(0, item);
@@ -100,7 +100,7 @@ class GetXObxRefreshListPage extends StatelessWidget {
   }
 
   static List<Rx<Person>> _buildPersonList() {
-    List<Rx<Person>> list = new List<Rx<Person>>();
+    List<Rx<Person>> list = <Rx<Person>>[];
     for (int x = 0; x < 10; x++) {
       list.add(Person("Obx测试 $x", x).obs);
     }

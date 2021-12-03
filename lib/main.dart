@@ -8,7 +8,6 @@ import 'package:FlutterPlayground/stateful_widget_page.dart';
 import 'package:FlutterPlayground/text_line_height_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:page_life_cycle/page_life_cycle.dart';
 
 import 'define/dart_define_page.dart';
 import 'gesture_test_page.dart';
@@ -48,10 +47,10 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        navigatorObservers: [PageNavigatorObserver()],
+        // navigatorObservers: [PageNavigatorObserver()],
         onGenerateRoute: (RouteSettings settings) {
           return MaterialPageRoute(builder: (BuildContext context) =>
-              routes[settings.name].call(context));
+              routes[settings.name]!.call(context));
         },
         // routes: routes,
         home: HomePage()
@@ -84,7 +83,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildBodyWidget() {
-    List<Widget> buttons = new List<Widget>();
+    List<Widget> buttons = <Widget>[];
     buttons.add(_buildBrightnessSwitch());
     buttons.add(_buildRaisedButton("StatelessPage", () => goToTargetPage(RouterConstant.STATELESS_PAGE)));
     buttons.add(_buildRaisedButton("StatefulPage", () => goToTargetPage(RouterConstant.STATEFULL_PAGE)));
@@ -109,7 +108,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   MaterialButton _buildRaisedButton(String text, VoidCallback callback) {
-    return RaisedButton(
+    return MaterialButton(
         onPressed: callback,
         child: Text(text)
     );

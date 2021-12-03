@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class RefreshAllWidgetA extends StatelessWidget {
   final int _mCount;
 
-  const RefreshAllWidgetA(this._mCount, {Key key}) : super(key: key);
+  const RefreshAllWidgetA(this._mCount, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

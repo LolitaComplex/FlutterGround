@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class BlurTestPage extends StatefulWidget {
-  const BlurTestPage({Key key}) : super(key: key);
+  const BlurTestPage({Key? key}) : super(key: key);
 
   @override
   _BlurTestPageState createState() => _BlurTestPageState();

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class InheritedInnerWidget extends StatefulWidget {
   final InheritedTestEntity _data;
-  const InheritedInnerWidget(this._data, {Key key, }) : super(key: key);
+  const InheritedInnerWidget(this._data, {Key? key}) : super(key: key);
 
   @override
   _InheritedInnerWidgetState createState() => _InheritedInnerWidgetState();
@@ -22,7 +22,7 @@ class _InheritedInnerWidgetState extends State<InheritedInnerWidget> {
         Text(getShareText()),
         Container(
           margin: EdgeInsets.only(top: 15),
-          child: RaisedButton(
+          child: MaterialButton(
               child: Text("Inner刷新"),
               onPressed: () => setState(() {
                 widget._data.fromInnerPage = _count++;
@@ -41,6 +41,6 @@ class _InheritedInnerWidgetState extends State<InheritedInnerWidget> {
 
   String getShareText() {
     var data = InheritedShareWidget.of(context)?.data as InheritedTestEntity;
-    return "Inner: ${data?.currentOuterPage ?? 0}";
+    return "Inner: ${data.currentOuterPage}";
   }
 }

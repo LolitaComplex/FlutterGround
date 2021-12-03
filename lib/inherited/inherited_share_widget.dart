@@ -4,10 +4,10 @@ class InheritedShareWidget<T> extends InheritedWidget {
 
   final T data;
 
-  const InheritedShareWidget({@required this.data, Widget child})
+  const InheritedShareWidget({required this.data, required Widget child})
       : super(child: child);
 
-  static InheritedShareWidget of(BuildContext context){
+  static InheritedShareWidget? of(BuildContext context){
     return context.dependOnInheritedWidgetOfExactType<InheritedShareWidget>();
   }
 

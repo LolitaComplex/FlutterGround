@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RefreshAllWidgetB extends StatelessWidget {
-  const RefreshAllWidgetB({Key key}) : super(key: key);
+  const RefreshAllWidgetB({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

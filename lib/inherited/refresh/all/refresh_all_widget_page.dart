@@ -5,7 +5,7 @@ import 'refersh_all_widget_b.dart';
 import 'refersh_all_widget_c.dart';
 
 class RefreshAllWidgetPage extends StatefulWidget {
-  const RefreshAllWidgetPage({Key key}) : super(key: key);
+  const RefreshAllWidgetPage({Key? key}) : super(key: key);
 
   @override
   _RefreshAllWidgetPageState createState() => _RefreshAllWidgetPageState();

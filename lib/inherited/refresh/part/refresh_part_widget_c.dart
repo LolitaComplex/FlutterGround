@@ -8,7 +8,7 @@ class RefreshPartWidgetC extends StatelessWidget {
     var state = RefreshPartWidgetPage.of(context, rebuild: false);
 
     print("RefreshPart: WidgetC refresh");
-    return RaisedButton(onPressed: state.incrementCount,
+    return MaterialButton(onPressed: state?.incrementCount,
       child: Icon(Icons.add),
     );
   }

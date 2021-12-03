@@ -5,7 +5,7 @@ import 'getx_counter_controller.dart';
 import 'package:get/get.dart';
 
 class GetXControllerRefreshPage extends StatelessWidget {
-  GetXControllerRefreshPage({Key key}) : super(key: key);
+  GetXControllerRefreshPage({Key? key}) : super(key: key);
 
   GetXCounterController _controller = GetXCounterController();
 
@@ -40,8 +40,8 @@ class GetXControllerRefreshPage extends StatelessWidget {
               },
             ),
             // Text("计数器控件Text: ${controller.count}"),
-            RaisedButton(onPressed: () => _controller.add1(), child: Icon(Icons.add)),
-            RaisedButton(onPressed: () => _controller.add2(), child: Icon(Icons.add))
+            MaterialButton(onPressed: () => _controller.add1(), child: Icon(Icons.add)),
+            MaterialButton(onPressed: () => _controller.add2(), child: Icon(Icons.add))
           ],
         ),
       ),

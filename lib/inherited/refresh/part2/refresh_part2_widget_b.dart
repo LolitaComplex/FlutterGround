@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RefreshPart2WidgetB extends StatefulWidget {
-  const RefreshPart2WidgetB({Key key}) : super(key: key);
+  const RefreshPart2WidgetB({Key? key}) : super(key: key);
 
   @override
   _RefreshPart2WidgetBState createState() => _RefreshPart2WidgetBState();
